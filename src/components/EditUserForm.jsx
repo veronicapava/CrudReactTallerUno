@@ -15,6 +15,7 @@ const EditUserForm = (props) => {
 
     const onSubmit = (data, e) => {
         console.log(data)
+        props.updateUser(props.currentUser.id, data)
         e.target.reset(); //Para limpiar los campos
     }
 
