@@ -2,7 +2,7 @@ import React from 'react'
 
 const UserTable = (props) => {
 
-    console.log(props)
+    console.log(props.users)
   return (
     <table>
         <thead>
@@ -15,14 +15,13 @@ const UserTable = (props) => {
         <tbody>
             {
                 props.users.length > 0 ?
-                //Recorremos la data con un map
-                props.users.map(user => (
+                props.users.map(user => ( //Recorremos la data con un map
                     <tr key={user.id}>
                         <td>{user.name}</td>
                         <td>{user.username}</td>
                         <td>
                          <button className="button muted-button">Edit</button>
-                         <button className="button muted-button">Delete</button>
+                         <button className="button muted-button" onClick={() =>{props.deleteUser(user.id)}}>Delete</button>
                         </td>
                     </tr>
                 )) : (
