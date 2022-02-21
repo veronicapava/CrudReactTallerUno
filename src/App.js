@@ -55,8 +55,6 @@ function App() {
   }
 
 
-
-
   return (
     <div className="container">
       <h1>CRUD App with Hooks</h1>
